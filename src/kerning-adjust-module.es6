@@ -413,8 +413,8 @@ class KERNING_ADJUST_MODULE {
     let _html = h;
     // Adjust HTML-tags
     _html = _html.replace(/<span><<\/span><span .*>b<\/span><span .*>r<\/span><span>><\/span>/g,'<br>');
-    _html = _html.replace(/<span><<\/span><span .*>b<\/span><span .*>r<\/span><span>><\/span>/g,'<br/>');
-    _html = _html.replace(/<span><<\/span><span .*>b<\/span><span .*>r<\/span><span>><\/span>/g,'<br />');
+    _html = _html.replace(/<span><<\/span><span .*>b<\/span><span .*>r<\/span><span>\/<\/span><span>><\/span>/g,'<br>');
+    _html = _html.replace(/<span><<\/span><span .*>b<\/span><span .*>r<\/span><span> <\/span><span>\/<\/span><span>><\/span>/g,'<br>');
     $(t).html(_html);
   }
 }
