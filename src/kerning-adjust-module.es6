@@ -360,7 +360,7 @@ class KERNING_ADJUST_MODULE {
     console.log(this);
   }
   CacheElement(){
-    this.$elem          = $(this.config.elem);
+    this.$elem = $(this.config.elem);
   }
   BindEvent(){
     let _that = this;
@@ -371,10 +371,10 @@ class KERNING_ADJUST_MODULE {
   EventDispatcher(){
     let _that = this;
     this.$elem.each(function(){
-      _that.setKerning(this);
+      _that.SetKerning(this);
     });
   }
-  setKerning(t){
+  SetKerning(t){
     let _str               = Array.prototype.slice.call(t.innerHTML);
     let _strFix            = '';
     let _currentFontStatus = '';
@@ -407,7 +407,14 @@ class KERNING_ADJUST_MODULE {
       _strFix += _str[_i];
       _strFix += '</span>';
     }
-    $(t).html(_strFix);
+    this.OutputKerning(t,_strFix);
+  }
+  OutputKerning(t,h){
+    let _html = h;
+    // Adjust HTML-tags
+    _html = _html.replace(/<span><<\/span><span .*>b<\/span><span .*>r<\/span><span>><\/span>/g,'<br>');
+    _html = _html.replace(/<span><<\/span><span .*>b<\/span><span .*>r<\/span><span>><\/span>/g,'<br>');
+    $(t).html(_html);
   }
 }
 window.KERNING_ADJUST_MODULE = KERNING_ADJUST_MODULE || {};
