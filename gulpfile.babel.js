@@ -27,6 +27,7 @@ const CONFIG = {
     html : './src/**/*.html',
     jade : './src/**/*.jade',
     css : './src/**/*.css',
+    es6 : './src/**/*.es6',
     php : './src/**/*.php',
     sass : './src/**/*.scss',
   },
