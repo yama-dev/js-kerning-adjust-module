@@ -3,16 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <title>kerning-adjust-module.js</title>
+  <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"-->
+  <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sanitize.css/2.0.0/sanitize.css"-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="./kerning-adjust-module.js"></script>
 </head>
 <body>
-  <h1 class="kam">テスト・文字列・test-text</h1>
-  <h2 class="kam">Amet exercitationem eveniet commodi at deserunt ullam repudiandae. Doloribus officia rerum qui mollitia similique. Eius nostrum voluptatum nobis nam fugiat maxime! Distinctio numquam ipsam accusamus at ipsum itaque eos velit?</h2>
+  <div class="zen-hira kam">
+    ぁあぃいぅうぇえぉおかがきぎくぐ<br>
+    けげこごさざしじすずせぜそぞただ<br>
+    ちぢっつづてでとどなにぬねのはば<br>
+    ぱひびぴふぶぷへべぺほぼぽまみむ<br>
+    めもゃやゅゆょよらりるれろゎわゐ<br>
+    ゑをん<br>
+  </div>
+  <div class="zen-kana kam">
+    ァアィイゥウェエォオカガキギクグ<br>
+    ケゲコゴサザシジスズセゼソゾタダ<br>
+    チヂッツヅテデトドナニヌネノハバ<br>
+    パヒビピフブプヘベペホボポマミム<br>
+    メモャヤュユョヨラリルレロヮワヰ<br>
+    ヱヲンヴヵヶ<br>
+  </div>
+  <div class="zen-eisu kam">
+    ０１２３４５６７８９<br>
+    ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰ<br>
+    ＱＲＳＴＵＶＷＸＹＺａｂｃｄｅｆ<br>
+    ｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖ<br>
+    ｗｘｙｚ<br>
+  </div>
+  <div class="zen-kigou kam">
+    、。，．・：；？！゛゜´｀¨＾￣<br>
+    ＿ヽヾゝゞ〃仝々〆〇ー―‐／＼～<br>
+    ∥｜…‥‘’“”（）〔〕［］｛｝<br>
+    〈〉《》「」『』【】＋－±×÷＝<br>
+    ≠＜＞≦≧∞∴♂♀°′″℃￥＄￠<br>
+    ￡％＃＆＊＠§☆★○●◎◇◆□■<br>
+    △▲▽▼※〒→←↑↓〓∈∋⊆⊇⊂<br>
+    ⊃∪∩∧∨￢⇒⇔∀∃∠⊥⌒∂∇≡<br>
+    ≒≪≫√∽∝∵∫∬Å‰♯♭♪<br>
+  </div>
+  <div class="zen-eisu kam">
+    !"#$%'()*+,-./0123456789:;<=>?<br>
+    @ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_<br>
+    `abcdefghijklmnopqrstuvwxyz{|}~<br>
+  </div>
 </body>
 <script>
-new KERNING_ADJUST_MODULE('.kam',{
-  defaultFontSize: 50
-});
+  new KERNING_ADJUST_MODULE('.kam',{
+    defaultFontSize: 30
+  });
 </script>
 </html>
